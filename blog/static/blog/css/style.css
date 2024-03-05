@@ -1,0 +1,18 @@
+.category{
+    color:#212529;
+    text-decoration: none;
+}
+
+.text-black{
+    color:#212529;
+    text-decoration:none;
+}
+
+.comment-form label{
+    color : #dc143c;
+    font-weight : 600;
+}
+
+footer{
+    text-align: center;
+}

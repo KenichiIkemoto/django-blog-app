@@ -1,0 +1,17 @@
+{% load blog %}
+
+{% if page_obj.has_previous %}
+    <a href="?{% replace request 'page' page_obj.previous_page_number %}" class="">前へ</a>
+{% endif %}
+
+{% for num in page_obj.paginator.page_range %}
+    {% if page_obj.number == num %}
+        <span>{{num}}</span>
+    {% else %}
+        <a href="?{% replace request 'page' num %}" class="">{{num}}</a>
+    {% endif %}
+{% endfor %}
+
+{% if page_obj.has_next %}
+    <a href="?{% replace request 'page' page_obj.next_page_number %}" class="">次へ</a>
+{% endif %}
